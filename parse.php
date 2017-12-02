@@ -9,7 +9,7 @@ $html = file_get_contents($file);
 use Overtrue\Pinyin\Pinyin;
 $pinyin = new Pinyin(); // 默认
 
-preg_match_all('/<title>(.*)<\/title>.*<link>(.*)<\/link>.*<pubDate>(.*)<\/pubDate>.*<description>(.*)<\/description>/sU', $html, $data, PREG_SET_ORDER );
+preg_match_all('/<item><title>(.*)<\/title>.*<link>(.*)<\/link>.*<pubDate>(.*)<\/pubDate>.*<description>(.*)<\/description><\/item>/sU', $html, $data, PREG_SET_ORDER );
 
 // var_dump($data);
 

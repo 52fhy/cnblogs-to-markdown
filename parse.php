@@ -5,7 +5,7 @@ include 'vendor/autoload.php';
 use Overtrue\Pinyin\Pinyin;
 
 function run(){
-	$file = 'CNBlogs_BlogBackup_131_201408_201801.xml';
+	$file = 'CNBlogs_BlogBackup_131_201408_202201.xml';
 	$html = file_get_contents($file);
 
 	
@@ -28,7 +28,8 @@ function run(){
 		$datetime = date('Y-m-d H:i:s', strtotime($item[3]));
 
 		//内容合成
-		$content = sprintf("# %s\r\n\r\n@date:%s\r\n\r\n%s", $item[1], $datetime, $content);
+		// $content = sprintf("---\r\ntitle: %s\r\ndate: %s\r\n---\r\n%s",$title, $datetime, $content);
+		$content = sprintf("---\r\ntitle: %s\r\ndate: %s\r\n---\r\n%s",$title, $datetime, $content);
 		
 		$dir = 'docs/'. date('Y', strtotime($item[3]));
 

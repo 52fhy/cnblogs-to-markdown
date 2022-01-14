@@ -1,0 +1,12 @@
+{
+    "name": "mi/cnblogs-to-markdown",
+    "authors": [
+        {
+            "name": "yujiancai",
+            "email": "yujiancai@xiaomi.com"
+        }
+    ],
+    "require": {
+        "overtrue/pinyin": "~4.0"
+    }
+}
